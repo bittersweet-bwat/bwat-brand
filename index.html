@@ -3,87 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bittersweet · Art with a twist · Brand kit (test)</title>
-<meta name="description" content="Bittersweet, art with a twist. Brand kit: logos, colours, fonts and graphics. A Bittersweet Design Lab project.">
+<title>Bittersweet · Art with a twist · Brand kit</title>
+<meta name="description" content="Bittersweet, art with a twist. Witty, original art prints with a playful edge: bold flat colour, deadpan characters and a little mischief. A Bittersweet Design Lab project.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#142127">
 <meta property="og:title" content="Bittersweet · Art with a twist">
-<meta property="og:description" content="Brand kit: logos, colours, fonts and graphics.">
+<meta property="og:description" content="Witty, original art prints with a playful edge.">
 <meta property="og:image" content="assets/og-image.png">
 <meta property="og:site_name" content="Bittersweet">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/BrindisiDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* ---------- Fonts (self-hosted) ---------- */
+  @font-face { font-family: "Brindisi Display"; src: url("assets/fonts/BrindisiDisplay-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Display Inked"; src: url("assets/fonts/BrindisiDisplay-Inked.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Display Black"; src: url("assets/fonts/BrindisiDisplay-Black.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Display Black Inked"; src: url("assets/fonts/BrindisiDisplay-BlackInked.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Inline"; src: url("assets/fonts/BrindisiInline-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Shadow"; src: url("assets/fonts/BrindisiShadow-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Shadow Front"; src: url("assets/fonts/BrindisiShadow-Front.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Brindisi Shadow Back"; src: url("assets/fonts/BrindisiShadow-Back.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Yellowtail"; src: url("assets/fonts/Yellowtail-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+  /* ---------- Brand tokens ---------- */
   :root {
+    /* Primary palette */
     --midnight: #142127;
     --mustard: #E0A526;
-    --tomato-red: #D8432E;
     --cream: #F3EAD8;
+    /* Accent palette */
+    --tomato-red: #D8432E;
     --teal: #1F7A74;
     --burgundy: #6E1F2A;
-    --font-wordmark: "Anhattan", "Yellowtail", cursive;
-    --font-tagline: "Bench Gadgent", Arial, sans-serif;
+
+    --font-headline: "Brindisi Display Black", "Arial Black", sans-serif;
+    --font-subheadline: "Forta", "Brindisi Display Inked", sans-serif;
+    --font-body: "Brindisi Display", Arial, sans-serif;
     --font-accent: "Yellowtail", cursive;
+
+    --card: #1C2D35;
+    --line: #2A3E48;
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: var(--midnight); color: var(--cream);
-    font-family: var(--font-tagline); line-height: 1.5;
+    margin: 0; background-color: var(--midnight); color: var(--cream);
+    font-family: var(--font-body); font-size: 18px; line-height: 1.5; letter-spacing: .02em;
     background-image: url("assets/grain-texture.png"); background-size: 512px;
   }
-  main { max-width: 960px; margin: 0 auto; padding: 48px 16px 80px; }
-  h1 { font-family: var(--font-accent); color: var(--mustard); font-weight: 400; font-size: clamp(48px, 10vw, 96px); margin: 0; }
-  .tag { letter-spacing: .25em; font-weight: 700; color: var(--mustard); text-transform: uppercase; }
-  h2 { letter-spacing: .2em; text-transform: uppercase; font-size: 14px; color: var(--mustard); margin: 56px 0 16px; border-top: 1px solid #2A3E48; padding-top: 24px; }
-  .logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-  .logos figure { margin: 0; background: #1C2D35; border-radius: 12px; padding: 24px; text-align: center; }
-  .logos img { max-width: 100%; height: 140px; object-fit: contain; }
-  figcaption { font-size: 13px; opacity: .75; margin-top: 8px; }
-  .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
-  .swatch { border-radius: 12px; overflow: hidden; background: #1C2D35; }
-  .swatch .chip { height: 90px; }
-  .swatch p { margin: 0; padding: 10px 12px; font-size: 13px; }
-  .font-row { background: #1C2D35; border-radius: 12px; padding: 20px; margin-bottom: 12px; }
-  .font-row .sample { font-size: 40px; color: var(--mustard); }
-  footer { margin-top: 64px; font-size: 13px; opacity: .7; }
+  main { max-width: 1040px; margin: 0 auto; padding: 56px 16px 96px; }
+  h1, h2, h3 { font-weight: 400; margin: 0; }
+  h1 { font-family: var(--font-headline); color: var(--mustard); font-size: clamp(44px, 9vw, 96px); line-height: .95; letter-spacing: .01em; }
+  h2 { font-family: var(--font-subheadline); color: var(--mustard); font-size: clamp(26px, 4vw, 36px); letter-spacing: .06em; text-transform: uppercase; }
+  h3 { font-family: var(--font-subheadline); font-size: 20px; letter-spacing: .08em; text-transform: uppercase; color: var(--cream); }
+  .accent { font-family: var(--font-accent); color: var(--mustard); font-size: clamp(30px, 5vw, 44px); line-height: 1.1; }
+  .kicker { font-family: var(--font-subheadline); letter-spacing: .3em; text-transform: uppercase; color: var(--mustard); font-size: 15px; margin-bottom: 12px; }
+  .lead { max-width: 640px; margin: 20px 0 0; }
+  section { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--line); }
+  section > p.note { opacity: .8; max-width: 680px; margin: 10px 0 24px; font-size: 16px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  figure { margin: 0; background: var(--card); border-radius: 14px; padding: 20px; }
+  figure img { display: block; width: 100%; height: 180px; object-fit: contain; }
+  figcaption { font-size: 14px; opacity: .8; margin-top: 10px; }
+  .swatches { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .swatch { background: var(--card); border-radius: 14px; overflow: hidden; }
+  .swatch .chip { height: 110px; }
+  .swatch p { margin: 0; padding: 12px 14px; font-size: 15px; line-height: 1.35; }
+  .palette-label { font-family: var(--font-subheadline); text-transform: uppercase; letter-spacing: .15em; font-size: 14px; margin: 24px 0 10px; opacity: .85; }
+  .type { background: var(--card); border-radius: 14px; padding: 22px; margin-bottom: 12px; }
+  .type .role { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; opacity: .7; }
+  .type .specimen { color: var(--mustard); margin: 8px 0; line-height: 1.1; }
+  .prints { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .prints img { width: 100%; height: auto; aspect-ratio: 2/3; object-fit: cover; border-radius: 10px; display: block; }
+  .prints figure { padding: 10px; }
+  ul.rules { padding-left: 20px; max-width: 720px; }
+  ul.rules li { margin-bottom: 8px; }
+  footer { margin-top: 80px; font-size: 14px; opacity: .7; }
 </style>
 </head>
 <body>
 <main>
-  <p class="tag">Art with a twist</p>
-  <h1>Bittersweet</h1>
-  <p>Brand kit test page. Placeholder logos: final files to come.</p>
 
-  <h2>Logos</h2>
-  <div class="logos">
-    <figure><img src="assets/bwat-logo-placeholder.svg" alt="Bittersweet logo"><figcaption>Primary logo (placeholder)</figcaption></figure>
-    <figure><img src="assets/bwat-icon-placeholder.svg" alt="Bittersweet B icon logo"><figcaption>B icon (placeholder)</figcaption></figure>
-    <figure><img src="assets/bwat-icon-mustard.png" alt="Bittersweet B badge logo"><figcaption>B badge PNG (placeholder)</figcaption></figure>
-  </div>
+  <header>
+    <p class="kicker">Art with a twist</p>
+    <h1>Bittersweet</h1>
+    <p class="lead">Witty, original art prints with a playful edge. Bold flat colour, deadpan characters and a little mischief: art that changes the personality of a room.</p>
+  </header>
 
-  <h2>Colours</h2>
-  <div class="swatches">
-    <div class="swatch"><div class="chip" style="background:#142127;border:1px solid #2A3E48"></div><p>Midnight<br>#142127</p></div>
-    <div class="swatch"><div class="chip" style="background:#E0A526"></div><p>Mustard<br>#E0A526</p></div>
-    <div class="swatch"><div class="chip" style="background:#D8432E"></div><p>Tomato red<br>#D8432E</p></div>
-    <div class="swatch"><div class="chip" style="background:#F3EAD8"></div><p>Cream<br>#F3EAD8</p></div>
-    <div class="swatch"><div class="chip" style="background:#1F7A74"></div><p>Teal<br>#1F7A74</p></div>
-    <div class="swatch"><div class="chip" style="background:#6E1F2A"></div><p>Burgundy<br>#6E1F2A</p></div>
-  </div>
+  <section id="logos">
+    <h2>Logos</h2>
+    <p class="note">Wordmark set in Anhattan, tagline in Forta. Final outlined logo files to be added. Primary lockup: tagline above the wordmark.</p>
+    <div class="grid">
+      <figure><img src="assets/bwat-icon-placeholder.svg" alt="Bittersweet B icon logo"><figcaption>B icon (placeholder)</figcaption></figure>
+      <figure><img src="assets/bwat-icon-mustard.png" alt="Bittersweet B badge logo"><figcaption>B badge (placeholder)</figcaption></figure>
+    </div>
+  </section>
 
-  <h2>Fonts</h2>
-  <div class="font-row"><div class="sample" style="font-family:var(--font-wordmark)">Bittersweet</div><p>Wordmark: Anhattan</p></div>
-  <div class="font-row"><div class="sample tag" style="font-family:var(--font-tagline);font-size:24px">Art with a twist</div><p>Tagline: Bench Gadgent</p></div>
-  <div class="font-row"><div class="sample" style="font-family:var(--font-accent)">Uno, uno, uno</div><p>Accent script: Yellowtail</p></div>
+  <section id="colours">
+    <h2>Colours</h2>
+    <p class="palette-label">Primary palette</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#142127;box-shadow:inset 0 0 0 2px #2A3E48"></div><p>Midnight<br>#142127</p></div>
+      <div class="swatch"><div class="chip" style="background:#E0A526"></div><p>Mustard<br>#E0A526</p></div>
+      <div class="swatch"><div class="chip" style="background:#F3EAD8"></div><p>Cream<br>#F3EAD8</p></div>
+    </div>
+    <p class="palette-label">Accent palette</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#D8432E"></div><p>Tomato red<br>#D8432E</p></div>
+      <div class="swatch"><div class="chip" style="background:#1F7A74"></div><p>Teal<br>#1F7A74</p></div>
+      <div class="swatch"><div class="chip" style="background:#6E1F2A"></div><p>Burgundy<br>#6E1F2A</p></div>
+    </div>
+  </section>
 
-  <h2>Graphics</h2>
-  <div class="logos">
-    <figure><img src="assets/grain-texture.png" alt="Grain texture graphic" style="background:#F3EAD8"><figcaption>Grain texture (transparent PNG)</figcaption></figure>
-  </div>
+  <section id="fonts">
+    <h2>Fonts</h2>
+    <div class="type"><div class="role">Headline · Brindisi Display Black</div><div class="specimen" style="font-family:var(--font-headline);font-size:56px">NEGRONI</div></div>
+    <div class="type"><div class="role">Subheadline · Forta</div><div class="specimen" style="font-family:var(--font-subheadline);font-size:30px;letter-spacing:.2em">ART WITH A TWIST</div></div>
+    <div class="type"><div class="role">Body · Brindisi Display</div><div class="specimen" style="font-family:var(--font-body);font-size:24px">STAMPATO A MELBOURNE</div></div>
+    <div class="type"><div class="role">Accent · Yellowtail</div><div class="specimen accent">Uno, uno, uno</div></div>
+    <div class="type"><div class="role">Display accents · Brindisi Inline &amp; Shadow (single words, sparingly)</div><div class="specimen" style="font-family:'Brindisi Inline';font-size:44px">SALUMERIA</div><div class="specimen" style="font-family:'Brindisi Shadow';font-size:44px;color:var(--teal)">CANTINA</div></div>
+    <div class="type"><div class="role">Logo only · Anhattan (wordmark)</div><div class="specimen" style="font-family:'Anhattan','Yellowtail',cursive;font-size:44px">Bittersweet</div></div>
+  </section>
+
+  <section id="graphics">
+    <h2>Graphics</h2>
+    <p class="note">Subtle risograph grain over flat colour. Use the transparent texture on top of artwork and backgrounds.</p>
+    <div class="grid">
+      <figure><img src="assets/grain-on-mustard.jpg" alt="Grain texture on mustard graphic"><figcaption>Grain on mustard</figcaption></figure>
+      <figure><img src="assets/grain-on-cream.jpg" alt="Grain texture on cream graphic"><figcaption>Grain on cream</figcaption></figure>
+      <figure><img src="assets/grain-texture.png" alt="Transparent grain texture graphic" style="background:#F3EAD8;border-radius:8px"><figcaption>Grain texture (transparent PNG)</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="visual-style">
+    <h2>Visual style</h2>
+    <p class="note">One bold idea per piece. Flat colour, real white space, deadpan characters, a little mischief. Printed texture, never glossy.</p>
+    <div class="prints">
+      <figure><img src="assets/prints/gin-and-bear-it.jpg" alt="Gin and Bear It art print"><figcaption>Gin and Bear It</figcaption></figure>
+      <figure><img src="assets/prints/flush-hour.jpg" alt="Flush Hour art print"><figcaption>Flush Hour</figcaption></figure>
+      <figure><img src="assets/prints/toadally-relaxed.jpg" alt="Toad-ally Relaxed art print"><figcaption>Toad-ally Relaxed</figcaption></figure>
+      <figure><img src="assets/prints/bubble-trouble.jpg" alt="Bubble Trouble art print"><figcaption>Bubble Trouble</figcaption></figure>
+      <figure><img src="assets/prints/loo-with-a-view.jpg" alt="Loo With a View art print"><figcaption>Loo With a View</figcaption></figure>
+      <figure><img src="assets/prints/olive-had-enough.jpg" alt="Olive Had Enough art print"><figcaption>Olive Had Enough</figcaption></figure>
+      <figure><img src="assets/prints/pour-judgement.jpg" alt="Pour Judgement art print"><figcaption>Pour Judgement</figcaption></figure>
+      <figure><img src="assets/prints/mixed-feelings.jpg" alt="Mixed Feelings art print"><figcaption>Mixed Feelings</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="voice">
+    <h2>Voice</h2>
+    <p class="accent">Bittersweet, with a wink.</p>
+    <ul class="rules">
+      <li>Dry, warm and a little cheeky. Never mean, never crude.</li>
+      <li>One idea per piece. If it needs explaining, it isn't finished.</li>
+      <li>Original designs only. No borrowed characters, brands or logos.</li>
+    </ul>
+  </section>
 
   <footer>Bittersweet · Art with a twist. A Bittersweet Design Lab project.</footer>
 </main>
